@@ -19,26 +19,38 @@ function playNote(note, key) {
 		currNote = hornSounds[note].cloneNode();
 	}
 
-	Mousetrap.bind(key, function() {
-		if (isWeed) {
-			document.getElementById('backgroundSnoop').style.display = 'none';
+	if (key === 'click') {
+		currNote.addEventListener('ended', function() {
+			if (isWeed) {
+				document.getElementById('backgroundSnoop').style.display = 'none';
+			} else {
+				document.getElementById('backgroundLeft').style.display = 'none';
+				document.getElementById('backgroundRight').style.display = 'none';
+			}
+		}, false);
+	} else {
+		console.log(key);
+		Mousetrap.bind(key, function() {
+			if (isWeed) {
+				document.getElementById('backgroundSnoop').style.display = 'none';
 
-			currNote.addEventListener('timeupdate', function() {
-				if (currNote.currentTime > 0.2) {
-					currNote.pause();
-				}
-			});
-		} else {
-			document.getElementById('backgroundLeft').style.display = 'none';
-			document.getElementById('backgroundRight').style.display = 'none';
+				currNote.addEventListener('timeupdate', function() {
+					if (currNote.currentTime > 0.2) {
+						currNote.pause();
+					}
+				});
+			} else {
+				document.getElementById('backgroundLeft').style.display = 'none';
+				document.getElementById('backgroundRight').style.display = 'none';
 
-			currNote.addEventListener('timeupdate', function() {
-				if (currNote.currentTime > 0.5) {
-					currNote.pause();
-				}
-			});
-		}
-	}, 'keyup');
+				currNote.addEventListener('timeupdate', function() {
+					if (currNote.currentTime > 0.5) {
+						currNote.pause();
+					}
+				});
+			}
+		}, 'keyup');
+	}
 
 	currNote.play();
 }
