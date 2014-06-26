@@ -6,6 +6,16 @@ function showKeyboard() {
 	document.getElementById('keyboard').style.display = 'block';
 }
 
+function switchMode() {
+	document.main.weedCheck.blur();
+
+	if (document.getElementById('weedCheck').checked) {
+		document.getElementById('header').style.color = '#1A661A';
+	} else {
+		document.getElementById('header').style.color = '#454545';
+	}
+}
+
 function playNote(note, key) {
 	var currNote;
 	var isWeed = document.getElementById('weedCheck').checked;

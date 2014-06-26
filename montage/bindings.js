@@ -1,6 +1,8 @@
 Mousetrap.bind('space', function() {
 	var curr = document.getElementById('weedCheck').checked;
 	document.getElementById('weedCheck').checked = !curr;
+
+	switchMode();
 });
 
 Mousetrap.bind('ctrl', function() {
