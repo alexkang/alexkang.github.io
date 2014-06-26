@@ -1,5 +1,6 @@
 var interventionFire = new Audio("sounds/intervention_fire.mp3");
 var hitmarker = new Audio("sounds/hitmarker.mp3");
+var smokeWeed = new Audio("sounds/smoke_weed.mp3");
 
 var hornSounds = 
 	[

@@ -1,4 +1,4 @@
-Mousetrap.bind('space', function() {
+Mousetrap.bind('`', function() {
 	var curr = document.getElementById('weedCheck').checked;
 	document.getElementById('weedCheck').checked = !curr;
 
@@ -11,6 +11,10 @@ Mousetrap.bind('ctrl', function() {
 
 Mousetrap.bind('shift', function() {
 	playSound('hitmarker');
+});
+
+Mousetrap.bind('space', function() {
+	playSound('smokeWeed');
 });
 
 Mousetrap.bind('s', function() {

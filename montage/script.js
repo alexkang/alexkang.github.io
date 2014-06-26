@@ -95,5 +95,14 @@ function playSound(sound) {
 		}, false);
 
 		currSound.play();
+	} else if (sound === 'smokeWeed') {
+		document.getElementById('backgroundSnoop').style.display = 'block';
+
+		var currSound = smokeWeed.cloneNode();
+		currSound.addEventListener('ended', function() {
+			document.getElementById('backgroundSnoop').style.display = 'none';
+		}, false);
+
+		currSound.play();
 	}
 }
