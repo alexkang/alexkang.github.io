@@ -60,6 +60,7 @@ function playSound(sound) {
 		var top = Math.random() * 100;
 
 		hitmarkerIcon.src = 'images/hitmarker.png';
+		hitmarkerIcon.style.width = '45px';
 		hitmarkerDiv.style.position = 'absolute';
 		hitmarkerDiv.style.left = left + '%';
 		hitmarkerDiv.style.top = top + '%';
