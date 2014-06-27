@@ -1,6 +1,12 @@
 var interventionFire = new Audio("sounds/intervention_fire.mp3");
-var hitmarker = new Audio("sounds/hitmarker.mp3");
 var smokeWeed = new Audio("sounds/smoke_weed.mp3");
+var hitmarker;
+
+if(navigator.userAgent.toLowerCase().indexOf('firefox') < 0) {
+     hitmarker = new Audio("sounds/hitmarker.mp3");
+} else {
+	hitmarker = new Audio("sounds/hitmarker_alt.mp3");
+}
 
 var hornSounds = 
 	[
