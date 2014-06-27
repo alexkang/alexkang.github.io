@@ -9,6 +9,10 @@ Mousetrap.bind('ctrl', function() {
 	playSound('intervention');
 });
 
+Mousetrap.bind('command', function() {
+	playSound('intervention');
+});
+
 Mousetrap.bind('shift', function() {
 	playSound('hitmarker');
 });
