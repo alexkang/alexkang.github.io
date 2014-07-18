@@ -50,11 +50,13 @@ function playNote(note, key) {
 }
 
 function stopNote(noteId, noteAudio, isWeed) {
+	var duration = $('#duration').slider('values', 0);
+
 	if (isWeed) {
 		$('#backgroundSnoop').hide();
 
 		noteAudio.addEventListener('timeupdate', function() {
-			if (noteAudio.currentTime > 0.2) {
+			if (noteAudio.currentTime > duration) {
 				noteAudio.pause();
 			}
 		});
@@ -63,7 +65,7 @@ function stopNote(noteId, noteAudio, isWeed) {
 		$('#backgroundRight').hide();
 
 		noteAudio.addEventListener('timeupdate', function() {
-			if (noteAudio.currentTime > 0.5) {
+			if (noteAudio.currentTime > duration) {
 				noteAudio.pause();
 			}
 		});
@@ -120,6 +122,23 @@ $(document).ready(function() {
 	$('#help').click(function() {
 		$('#keyboard').fadeIn(500);
 		$('#helpBackground').fadeIn(500);
+	});
+
+	$('#duration').slider({
+		min: 0.00, 
+		max: 1.00, 
+		step: 0.01, 
+		value: 0.40,
+		slide: function(event, ui) {
+			var value = $('#duration').slider('values', 0);
+			if (value.toString().length == 3) {
+				$('#durationLabel').html(value + '0');
+			} else if (value.toString().length == 1) {
+				$('#durationLabel').html(value + '.00');
+			} else {
+				$('#durationLabel').html(value);
+			}
+		}
 	});
 
 	$('button').mousedown(function() {

@@ -16,7 +16,11 @@ h1 {
 }
 
 .weedTitle {
-	text-shadow: 0px 0px 4px rgba(77,232,26,0.6), 0px 0px 30px rgba(77,232,26,0.4), 0px 0px 50px rgba(77,232,26,0.3), 0px 0px 180px rgba(77,232,26,0.3);
+	text-shadow: 
+		0px 0px 4px rgba(77,232,26,0.6), 
+		0px 0px 30px rgba(77,232,26,0.4), 
+		0px 0px 50px rgba(77,232,26,0.3), 
+		0px 0px 180px rgba(77,232,26,0.3);
 	color: rgba(77,232,26,0);
 }
 
@@ -95,11 +99,27 @@ h1 {
 	text-align: center;
 	color: #454545;
 	position: absolute;
+	margin-bottom: 10px;
 	top: 20%;
 	bottom: 0;
 	left: 0;
 	right: 0;
 	z-index: 1;
+}
+
+#switch {
+	display: inline-block;
+}
+
+#duration {
+	width: 200px;
+	margin-left: 40px;
+	margin-right: 10px;
+	display: inline-block;
+}
+
+#durationLabel {
+	display: inline-block;
 }
 
 #help {
