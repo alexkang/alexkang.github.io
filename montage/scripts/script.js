@@ -4,15 +4,17 @@ function switchMode() {
 	var weedChecked = $('#weedCheck').prop('checked');
 
 	if (weedChecked) {
-		$('h1').css('color', '#1A661A');
+		$('h1').addClass('weedTitle');
 	} else {
-		$('h1').css('color', '#454545');
+		$('h1').removeClass('weedTitle');
 	}
 }
 
 function playNote(note, key) {
 	var currNote;
 	var isWeed = $('#weedCheck').prop('checked');
+
+	$('#' + note).addClass('button-clicked');
 
 	if (isWeed) {
 		$('#backgroundSnoop').show();
@@ -31,31 +33,43 @@ function playNote(note, key) {
 				$('#backgroundLeft').hide();
 				$('#backgroundRight').hide();
 			}
+
+			$('#' + note).removeClass('button-clicked');
 		}, false);
+
+		$('button').mouseup(function() {
+			stopNote(note, currNote, isWeed);
+		});
 	} else {
 		Mousetrap.bind(key, function() {
-			if (isWeed) {
-				$('#backgroundSnoop').hide();
-
-				currNote.addEventListener('timeupdate', function() {
-					if (currNote.currentTime > 0.2) {
-						currNote.pause();
-					}
-				});
-			} else {
-				$('#backgroundLeft').hide();
-				$('#backgroundRight').hide();
-
-				currNote.addEventListener('timeupdate', function() {
-					if (currNote.currentTime > 0.5) {
-						currNote.pause();
-					}
-				});
-			}
+			stopNote(note, currNote, isWeed);
 		}, 'keyup');
 	}
 
 	currNote.play();
+}
+
+function stopNote(noteId, noteAudio, isWeed) {
+	if (isWeed) {
+		$('#backgroundSnoop').hide();
+
+		noteAudio.addEventListener('timeupdate', function() {
+			if (noteAudio.currentTime > 0.2) {
+				noteAudio.pause();
+			}
+		});
+	} else {
+		$('#backgroundLeft').hide();
+		$('#backgroundRight').hide();
+
+		noteAudio.addEventListener('timeupdate', function() {
+			if (noteAudio.currentTime > 0.5) {
+				noteAudio.pause();
+			}
+		});
+	}
+
+	$('#' + noteId).removeClass('button-clicked');
 }
 
 function playSound(sound) {
@@ -76,6 +90,7 @@ function playSound(sound) {
 		$hitmarker.css('position', 'absolute');
 		$hitmarker.css('left', left + '%');
 		$hitmarker.css('top', top + '%');
+		$hitmarker.css('z-index', 3);
 
 		$('body').append($hitmarker);
 
@@ -98,10 +113,20 @@ function playSound(sound) {
 
 $(document).ready(function() {
 	$('#keyboard').click(function() {
-		$(this).fadeOut(300);
+		$(this).fadeOut(500);
+		$('#helpBackground').fadeOut(500);
 	});
 
 	$('#help').click(function() {
-		$('#keyboard').fadeIn(300);
-	})
+		$('#keyboard').fadeIn(500);
+		$('#helpBackground').fadeIn(500);
+	});
+
+	$('button').mousedown(function() {
+		var note = parseInt($(this).attr('id'));
+		playNote(note, 'click');
+	});
+
+	$('#keyboard').fadeIn(1000);
+	$('#helpBackground').fadeIn(1000);
 });
