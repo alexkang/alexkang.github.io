@@ -1,6 +1,6 @@
 Mousetrap.bind('`', function() {
-	var curr = document.getElementById('weedCheck').checked;
-	document.getElementById('weedCheck').checked = !curr;
+	var weedChecked = $('#weedCheck').prop('checked');
+	$('#weedCheck').prop('checked', !weedChecked);
 
 	switchMode();
 });

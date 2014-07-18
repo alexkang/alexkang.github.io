@@ -1,4 +1,4 @@
-
+<!doctype html>
 <html>
 <title>MontageBoard</title>
 
@@ -6,6 +6,7 @@
 <link rel="stylesheet" type="text/css" href="style.css">
 
 <head>
+	<script src="jquery-1.11.1.min.js"></script>
 	<script src="mousetrap-master/mousetrap.min.js"></script>
 	<script src="audio.js"></script>
 	<script src="script.js"></script>
@@ -15,11 +16,11 @@
 <body>
 
 	<div id="backgroundLeft">
-		<image src="images/frog_left.gif" width="20%" />
+		<image src="images/frog_left.gif" width="25%" />
 	</div>
 
 	<div id="backgroundRight">
-		<image src="images/frog_right.gif" width="20%" />
+		<image src="images/frog_right.gif" width="25%" />
 	</div>
 
 	<div id="backgroundSnoop">
@@ -31,18 +32,18 @@
 	</div>
 
 	<div id="help">
-		<input type="image" src="images/question_icon.png" width="40px" height="40px" onclick="showKeyboard()"></input>
+		<image src="images/question_icon.png" width="40px" height="40px" />
 	</div>
 
 	<div id="keyboard">
 		Click to Close
 		<br>
-		<input type="image" src="images/keyboard_layout.png" onclick="hideKeyboard()" />
+		<image src="images/keyboard_layout.png" />
 	</div>
 
 	<div id="mainBody">
 		<form name="main">
-			<h1 id='header'> xXMontageBoardXx </h1>
+			<h1> xX_MontageBoard_Xx </h1>
 
 			<button type="button" onclick="playNote(0, 'click')">C</button>
 			<button type="button" onclick="playNote(1, 'click')">C#</button>
@@ -60,7 +61,7 @@
 
 			<p>
 
-			<input type="checkbox" name="weedCheck" id="weedCheck" onclick="switchMode()">
+			<input type="checkbox" id="weedCheck" />
 			#420BLAZIT
 		</form>
 	</div>

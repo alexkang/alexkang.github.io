@@ -1,48 +1,41 @@
-function hideKeyboard() {
-	document.getElementById('keyboard').style.display = 'none';
-}
-
-function showKeyboard() {
-	document.getElementById('keyboard').style.display = 'block';
-}
-
 function switchMode() {
-	document.main.weedCheck.blur();
+	$('#weedCheck').blur();
 
-	if (document.getElementById('weedCheck').checked) {
-		document.getElementById('header').style.color = '#1A661A';
+	var weedChecked = $('#weedCheck').prop('checked');
+
+	if (weedChecked) {
+		$('h1').css('color', '#1A661A');
 	} else {
-		document.getElementById('header').style.color = '#454545';
+		$('h1').css('color', '#454545');
 	}
 }
 
 function playNote(note, key) {
 	var currNote;
-	var isWeed = document.getElementById('weedCheck').checked;
+	var isWeed = $('#weedCheck').prop('checked');
 
 	if (isWeed) {
-		document.getElementById('backgroundSnoop').style.display = 'block';
+		$('#backgroundSnoop').show();
 		currNote = weedSounds[note].cloneNode();
 	} else {
-		document.getElementById('backgroundLeft').style.display = 'block';
-		document.getElementById('backgroundRight').style.display = 'block';
+		$('#backgroundLeft').show();
+		$('#backgroundRight').show();
 		currNote = hornSounds[note].cloneNode();
 	}
 
 	if (key === 'click') {
 		currNote.addEventListener('ended', function() {
 			if (isWeed) {
-				document.getElementById('backgroundSnoop').style.display = 'none';
+				$('#backgroundSnoop').hide();
 			} else {
-				document.getElementById('backgroundLeft').style.display = 'none';
-				document.getElementById('backgroundRight').style.display = 'none';
+				$('#backgroundLeft').hide();
+				$('#backgroundRight').hide();
 			}
 		}, false);
 	} else {
-		console.log(key);
 		Mousetrap.bind(key, function() {
 			if (isWeed) {
-				document.getElementById('backgroundSnoop').style.display = 'none';
+				$('#backgroundSnoop').hide();
 
 				currNote.addEventListener('timeupdate', function() {
 					if (currNote.currentTime > 0.2) {
@@ -50,8 +43,8 @@ function playNote(note, key) {
 					}
 				});
 			} else {
-				document.getElementById('backgroundLeft').style.display = 'none';
-				document.getElementById('backgroundRight').style.display = 'none';
+				$('#backgroundLeft').hide();
+				$('#backgroundRight').hide();
 
 				currNote.addEventListener('timeupdate', function() {
 					if (currNote.currentTime > 0.5) {
@@ -67,42 +60,48 @@ function playNote(note, key) {
 
 function playSound(sound) {
 	if (sound === 'intervention') {
-		document.getElementById('intervention').style.display = 'block';
+		$('#intervention').show();
 
 		Mousetrap.bind('ctrl', function() {
-			document.getElementById('intervention').style.display = 'none';
+			$('#intervention').hide();
 		}, 'keyup');
 
 		interventionFire.cloneNode().play();
 	} else if (sound === 'hitmarker') {
-		var hitmarkerDiv = document.createElement('div');
-		var hitmarkerIcon = document.createElement('img');
+		var $hitmarker = $('<img src="images/hitmarker.png" width="45px" />');
 		var currSound = hitmarker.cloneNode();
 		var left = Math.random() * 100;
 		var top = Math.random() * 100;
 
-		hitmarkerIcon.src = 'images/hitmarker.png';
-		hitmarkerIcon.style.width = '45px';
-		hitmarkerDiv.style.position = 'absolute';
-		hitmarkerDiv.style.left = left + '%';
-		hitmarkerDiv.style.top = top + '%';
+		$hitmarker.css('position', 'absolute');
+		$hitmarker.css('left', left + '%');
+		$hitmarker.css('top', top + '%');
 
-		hitmarkerDiv.appendChild(hitmarkerIcon);
-		document.body.appendChild(hitmarkerDiv);
+		$('body').append($hitmarker);
 
 		currSound.addEventListener('ended', function() {
-			document.body.removeChild(hitmarkerDiv);
+			$hitmarker.remove();
 		}, false);
 
 		currSound.play();
 	} else if (sound === 'smokeWeed') {
-		document.getElementById('backgroundSnoop').style.display = 'block';
+		$('#backgroundSnoop').show();
 
 		var currSound = smokeWeed.cloneNode();
 		currSound.addEventListener('ended', function() {
-			document.getElementById('backgroundSnoop').style.display = 'none';
+			$('#backgroundSnoop').hide();
 		}, false);
 
 		currSound.play();
 	}
 }
+
+$(document).ready(function() {
+	$('#keyboard').click(function() {
+		$(this).fadeOut(300);
+	});
+
+	$('#help').click(function() {
+		$('#keyboard').fadeIn(300);
+	})
+});
