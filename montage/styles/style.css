@@ -93,6 +93,7 @@ h1 {
 	bottom: 0;
 	right: 0;
 	display: none;
+	z-index: 3;
 }
 
 #mainBody {
