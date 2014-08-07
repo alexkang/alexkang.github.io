@@ -124,6 +124,11 @@ $(document).ready(function() {
 		$('#helpBackground').fadeIn(500);
 	});
 
+	$('#weedCheck').change(function() {
+		$('#weedCheck').trigger('blur');
+		switchMode();
+	});
+
 	$('#duration').slider({
 		min: 0.00, 
 		max: 1.00, 
