@@ -1,0 +1,141 @@
+body {
+	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+	font-size: 18px;
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	background-image: url('../images/background.png');
+	overflow: hidden;
+}
+
+h1 {
+	font-family: "Calisto MT", "Bookman Old Style", Bookman, "Goudy Old Style", Garamond, "Hoefler Text", "Bitstream Charter", Georgia, serif;
+	font-size: 45px;
+	font-weight: normal;
+	color: #923158;
+	margin: 0px;
+}
+
+h2 {
+	color: #6E1237;
+}
+
+h3 {
+	color: #6E1237;
+	font-size: 24px;
+	font-style: italic;
+	margin-top: 15px;
+}
+
+table {
+	margin: 0 auto;
+}
+
+td {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+ul {
+	width: 35%;
+	margin: 0 auto;
+}
+
+li {
+	text-align: left;
+}
+
+.header {
+	text-align: center;
+	margin: 0 auto;
+	opacity: 0.8;
+	background-image: url('../images/header_photo.png');
+	background-size: 100% 150%;
+	background-repeat: no-repeat;
+}
+
+.nav_bar {
+	position: relative;
+	display: table;
+	width: 70%;
+	height: 50px;
+	padding-left: 15%;
+	padding-right: 15%;
+	text-align: center;
+	background-color: #6E1237;
+}
+
+.nav_bar_item {
+	width: 15%;
+	height: 100%;
+	display: inline-block;
+	font-size: 18px;
+	color: #FFFFFF;
+	cursor: pointer;
+	line-height: 50px;
+	vertical-align: middle;
+}
+
+.page_body {
+	position: relative;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	width: 100%;
+	text-align: center;
+}
+
+.table_left {
+	text-align: left;
+}
+
+#glamour {
+	font-family: "Brush Script MT", cursive;
+	font-size: 150px;
+}
+
+#home_page {
+	margin-top: 0%
+}
+
+#home_page li {
+	font-size: 24px;
+	font-style: italic;
+}
+
+#left_bullets {
+	position: absolute;
+	top: 25%;
+	padding: 40px;
+}
+
+#right_bullets {
+	position: absolute;
+	top: 25%;
+	right: 0;
+	padding: 40px;
+}
+
+#left_bullets li {
+	text-align: right;
+	direction: rtl;
+}
+
+#slideshow {
+	position: relative;
+	width: 600px; 
+	height: 350px;
+}
+
+#slides {
+	position: absolute;
+	cursor: move; 
+	overflow: hidden; 
+	width: 600px; 
+	height: 350px;
+}
+
+#about_image {
+	width: 60%;
+}
