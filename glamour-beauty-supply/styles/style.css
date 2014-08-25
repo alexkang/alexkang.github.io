@@ -90,7 +90,7 @@ li {
 }
 
 .info_box {
-	height: 200px;
+
 	padding: 1.5rem;
 	box-shadow: 0 2px 2px #aaa;
 	background:white;
@@ -110,8 +110,9 @@ li {
 	position: fixed;
 	bottom: 0;
 	left: 0;
-	width: 30%;
-	opacity: 0.60;
+	width: 25%;
+	opacity: 0.50;
+	z-index: -1;
 }
 
 .table_left {
@@ -141,24 +142,23 @@ li {
 
 #slideshow {
 	position: relative;
-	width: 600px;
-	height: 350px;
+	width: 45%;
+
 }
 
 #slides {
 	position: absolute;
 	cursor: move; 
 	overflow: hidden; 
-	width: 600px;
-	height: 350px;
+	width: 100%;
+
 }
 
 #about_image {
-	width: 75%;
+	width: 70%;
 }
 
 #map_canvas {
 	margin: 0 auto;
-	width: 75%;
-	height:550px;
+	width: 70%;
 }

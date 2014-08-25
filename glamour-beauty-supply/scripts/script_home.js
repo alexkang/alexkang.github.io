@@ -1,11 +1,13 @@
 function resizeElements() {
-	var leftoverWidth = ($(window).width() - 600);
-	var height = ($(window).height());
+	var width = $('#slideshow').width();
+	var leftoverWidth = $(window).width() - width;
 
 	$('#slideshow').css('left', leftoverWidth / 2);
 	$('#info_box_left').css('width', (leftoverWidth / 2) - 50);
 	$('#info_box_right').css('width', (leftoverWidth / 2) - 50);
-	// $('h3').css('padding-top')
+
+	$('#slideshow').css('height', (width / 16) * 9);
+	$('#slides').css('height', (width / 16) * 9);
 }
 
 $(document).ready(function() {
