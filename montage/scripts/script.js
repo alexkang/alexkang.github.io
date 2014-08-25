@@ -84,6 +84,10 @@ function playSound(sound) {
 			$('#intervention').hide();
 		}, 'keyup');
 
+		Mousetrap.bind('command', function() {
+			$('#intervention').hide();
+		}, 'keyup');
+
 		interventionFire.currentTime = 0;
 		interventionFire.play();
 	} else if (sound === 'hitmarker') {
