@@ -18,12 +18,14 @@ function playNote(note, key) {
 
 	if (isWeed) {
 		$('#backgroundSnoop').show();
-		currNote = weedSounds[note].cloneNode();
+		currNote = weedSounds[note]
 	} else {
 		$('#backgroundLeft').show();
 		$('#backgroundRight').show();
-		currNote = hornSounds[note].cloneNode();
+		currNote = hornSounds[note]
 	}
+
+	currNote.currentTime = 0;
 
 	if (key === 'click') {
 		currNote.addEventListener('ended', function() {
@@ -82,10 +84,10 @@ function playSound(sound) {
 			$('#intervention').hide();
 		}, 'keyup');
 
-		interventionFire.cloneNode().play();
+		interventionFire.currentTime = 0;
+		interventionFire.play();
 	} else if (sound === 'hitmarker') {
 		var $hitmarker = $('<img src="images/hitmarker.png" width="45px" />');
-		var currSound = hitmarker.cloneNode();
 		var left = Math.random() * 100;
 		var top = Math.random() * 100;
 
@@ -96,20 +98,21 @@ function playSound(sound) {
 
 		$('body').append($hitmarker);
 
-		currSound.addEventListener('ended', function() {
+		hitmarker.currentTime = 0;
+		hitmarker.addEventListener('ended', function() {
 			$hitmarker.remove();
 		}, false);
 
-		currSound.play();
+		hitmarker.play();
 	} else if (sound === 'smokeWeed') {
 		$('#backgroundSnoop').show();
 
-		var currSound = smokeWeed.cloneNode();
-		currSound.addEventListener('ended', function() {
+		smokeWeed.currentTime = 0;
+		smokeWeed.addEventListener('ended', function() {
 			$('#backgroundSnoop').hide();
 		}, false);
 
-		currSound.play();
+		smokeWeed.play();
 	}
 }
 
