@@ -1,16 +1,18 @@
-function resizeSlideShow() {
-	var leftoverSpace = ($(window).width() - 600) / 2;
+function resizeElements() {
+	var leftoverWidth = ($(window).width() - 600);
+	var height = ($(window).height());
 
-	$('#slideshow').css('left', leftoverSpace);
-	$('#left_bullets').css('width', leftoverSpace - 80);
-	$('#right_bullets').css('width', leftoverSpace - 80);
+	$('#slideshow').css('left', leftoverWidth / 2);
+	$('#info_box_left').css('width', (leftoverWidth / 2) - 50);
+	$('#info_box_right').css('width', (leftoverWidth / 2) - 50);
+	// $('h3').css('padding-top')
 }
 
 $(document).ready(function() {
-	resizeSlideShow();
+	resizeElements();
 
 	$(window).resize(function() {
-		resizeSlideShow();
+		resizeElements();
 	});
 
 	var options = {

@@ -1,4 +1,22 @@
+var offset;
+
+function updateNavBar() {
+	var distanceFromTop = $(window).scrollTop();
+
+	if (distanceFromTop >= offset) {
+		$('.nav_bar').css({ 'position': 'fixed', 'top': 0 });
+	} else {
+		$('.nav_bar').css({ 'position': 'relative' });
+	}
+}
+
 $(document).ready(function() {
+
+	offset = $('.nav_bar').offset().top;
+
+	$(window).scroll(function() {
+		updateNavBar();
+	});
 
 	$('.nav_bar_item').hover(function() {
 		$(this).css('background-color', '#B65B80');
