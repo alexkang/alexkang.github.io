@@ -38,39 +38,21 @@ function playNote(note, key) {
 
 			$('#' + note).removeClass('button-clicked');
 		}, false);
-
-		$('button').mouseup(function() {
-			stopNote(note, currNote, isWeed);
-		});
-	} else {
-		Mousetrap.bind(key, function() {
-			stopNote(note, currNote, isWeed);
-		}, 'keyup');
 	}
 
 	currNote.play();
+	setTimeout(function() {
+		currNote.pause();
+		stopNoteVisual(note, isWeed);
+	}, $('#duration').slider('values', 0) * 1000);
 }
 
-function stopNote(noteId, noteAudio, isWeed) {
-	var duration = $('#duration').slider('values', 0);
-
+function stopNoteVisual(noteId, isWeed) {
 	if (isWeed) {
 		$('#backgroundSnoop').hide();
-
-		noteAudio.addEventListener('timeupdate', function() {
-			if (noteAudio.currentTime > duration) {
-				noteAudio.pause();
-			}
-		});
 	} else {
 		$('#backgroundLeft').hide();
 		$('#backgroundRight').hide();
-
-		noteAudio.addEventListener('timeupdate', function() {
-			if (noteAudio.currentTime > duration) {
-				noteAudio.pause();
-			}
-		});
 	}
 
 	$('#' + noteId).removeClass('button-clicked');
