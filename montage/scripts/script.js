@@ -18,11 +18,11 @@ function playNote(note, key) {
 
 	if (isWeed) {
 		$('#backgroundSnoop').show();
-		currNote = weedSounds[note]
+		currNote = weedSounds[note];
 	} else {
 		$('#backgroundLeft').show();
 		$('#backgroundRight').show();
-		currNote = hornSounds[note]
+		currNote = hornSounds[note];
 	}
 
 	currNote.currentTime = 0;
