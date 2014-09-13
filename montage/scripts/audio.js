@@ -1,11 +1,16 @@
 var interventionFire = new Audio("sounds/intervention_fire.mp3");
 var smokeWeed = new Audio("sounds/smoke_weed.mp3");
 var hitmarker;
+var userAgent = navigator.userAgent.toLowerCase();
 
-if(navigator.userAgent.toLowerCase().indexOf('firefox') < 0) {
+if (userAgent.indexOf('firefox') < 0) {
      hitmarker = new Audio("sounds/hitmarker.mp3");
 } else {
 	hitmarker = new Audio("sounds/hitmarker_alt.mp3");
+}
+
+if (userAgent.indexOf('chrome') <= -1 && userAgent.indexOf('safari') > -1) {
+	alert("Consider switching to a different browser as HTML5 audio has some latency issues with Safari.");
 }
 
 var hornSounds = 

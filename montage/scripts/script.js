@@ -28,23 +28,21 @@ function playNote(note, key) {
 	currNote.currentTime = 0;
 
 	if (key === 'click') {
-		currNote.addEventListener('ended', function() {
-			if (isWeed) {
-				$('#backgroundSnoop').hide();
-			} else {
-				$('#backgroundLeft').hide();
-				$('#backgroundRight').hide();
-			}
-
-			$('#' + note).removeClass('button-clicked');
-		}, false);
+		$('#' + note).mouseup(function() {
+			stopNoteVisual(note, isWeed);
+		});
+	} else {
+		Mousetrap.bind(key, function() {
+			stopNoteVisual(note, isWeed);
+		}, 'keyup');
 	}
 
+	currNote.addEventListener('play', function() {
+		setTimeout(function() {
+			currNote.pause();
+		}, $('#duration').slider('values', 0) * 1000);
+	});
 	currNote.play();
-	setTimeout(function() {
-		currNote.pause();
-		stopNoteVisual(note, isWeed);
-	}, $('#duration').slider('values', 0) * 1000);
 }
 
 function stopNoteVisual(noteId, isWeed) {
