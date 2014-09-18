@@ -5,8 +5,10 @@ function updateNavBar() {
 
 	if (distanceFromTop >= offset) {
 		$('.nav_bar').css({ 'position': 'fixed', 'top': 0 });
+		$('body').css({ 'padding-top': 50 });
 	} else {
 		$('.nav_bar').css({ 'position': 'relative' });
+		$('body').css({ 'padding-top': 0 });
 	}
 }
 

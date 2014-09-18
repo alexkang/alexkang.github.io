@@ -1,4 +1,4 @@
-body {
+  body {
 	font-family: Helvetica, Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 	font-size: 18px;
 	width: 100%;
@@ -143,7 +143,6 @@ li {
 #slideshow {
 	position: relative;
 	width: 45%;
-
 }
 
 #slides {
@@ -151,7 +150,6 @@ li {
 	cursor: move; 
 	overflow: hidden; 
 	width: 100%;
-
 }
 
 #about_image {
