@@ -8,6 +8,8 @@ function resizeElements() {
 
 	$('#slideshow').css('height', (width / 16) * 9);
 	$('#slides').css('height', (width / 16) * 9);
+
+	$('.info_box').css('height', (width / 16) * 9 - 150);
 }
 
 $(document).ready(function() {

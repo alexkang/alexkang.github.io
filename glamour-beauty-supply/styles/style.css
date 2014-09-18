@@ -90,12 +90,12 @@ li {
 }
 
 .info_box {
-
 	padding: 1.5rem;
 	box-shadow: 0 2px 2px #aaa;
 	background:white;
 	border-radius: 3px;
 	text-align: left;
+	overflow: auto;
 }
 
 .badge {
