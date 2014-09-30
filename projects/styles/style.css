@@ -6,6 +6,13 @@ body {
 }
 
 h1 {
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
 	margin: 0;
 	margin-left: 7%;
 	font-size: 48pt;
@@ -14,6 +21,13 @@ h1 {
 }
 
 h2 {
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
 	color: #009688;
 	font-size: 24pt;
 	font-weight: lighter;
@@ -38,18 +52,24 @@ h2 {
 }
 
 .list_element {
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 	display: table-cell;
 	vertical-align: middle;
 	text-align: center;
 	cursor: pointer;
-	height: 125px;
-	width: 125px;
+	height: 140px;
+	width: 140px;
 	padding: 32px;
 	margin: 18px;
 	border-radius: 4px;
 	box-shadow: 2px 2px 10px #888888;
 	font-weight: bold;
-	font-size: 13pt;
+	font-size: 14pt;
 	color: #333333;
 }
 

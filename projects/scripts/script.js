@@ -7,6 +7,10 @@ $(document).ready(function() {
 		$(this).removeClass("list_element_pressed");
 	});
 
+	$('.list_element').mouseleave(function() {
+		$(this).removeClass("list_element_pressed");
+	});
+
 	$('#loopboard').click(function() {
 		window.location.href = "https://play.google.com/store/apps/details?id=com.alexkang.loopboard";
 	});
