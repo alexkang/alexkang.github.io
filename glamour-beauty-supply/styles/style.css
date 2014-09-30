@@ -18,6 +18,8 @@ h1 {
 
 h2 {
 	color: #6E1237;
+	font-weight: lighter;
+	font-size: 28pt;
 }
 
 h3 {
@@ -25,6 +27,7 @@ h3 {
 	color: #6E1237;
 	font-size: 24px;
 	font-style: italic;
+	font-weight: lighter;
 }
 
 table {
@@ -107,9 +110,6 @@ li {
 }
 
 .hour_sign {
-	position: fixed;
-	bottom: 0;
-	left: 0;
 	width: 25%;
 	opacity: 0.50;
 	z-index: -1;
@@ -130,23 +130,22 @@ li {
 
 #info_box_left {
 	position: absolute;
-	top: 50px;
+	top: 40px;
 	left: 25px;
 }
 
 #info_box_right {
 	position: absolute;
-	top: 50px;
+	top: 40px;
 	right: 25px;
 }
 
 #slideshow {
 	position: relative;
-	width: 45%;
+	width: 50%;
 }
 
 #slides {
-	position: absolute;
 	cursor: move; 
 	overflow: hidden; 
 	width: 100%;
