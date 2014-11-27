@@ -30,10 +30,6 @@ $(document).ready(function() {
 		window.location.href = "index.html";
 	});
 
-	$('#about').click(function() {
-		window.location.href = "about.html";
-	});
-
 	$('#hours').click(function() {
 		window.location.href = "hours.html";
 	});

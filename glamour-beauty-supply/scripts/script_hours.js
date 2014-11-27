@@ -4,19 +4,23 @@ function isOpen() {
 	var hour = date.getHours();
 	var minute = date.getMinutes();
 
-	if (day == 0 || day == 6) {
-		if (hour < 9 || hour > 18) {
+	if (day == 0) {
+		if (hour < 9 || hour >= 18) {
 			return false;
-		} else if (hour == 9 && minute < 29) {
+		} else if (hour == 9 && minute >= 30) {
 			return false;
-		} else if (hour == 18 && minute > 29) {
+		}
+	} else if (day == 4 || day == 5) {
+		if (hour < 8 || hour > 20) {
+			return false;
+		} else if (hour == 20 && minute >= 30) {
 			return false;
 		}
 	} else {
-		if (hour < 8 || hour > 20) {
+		if (hour < 8 || hour > 18) {
 			return false;
-		} else if (hour == 8 && minute < 29) {
-			return false
+		} else if (hour == 8 && minute <= 30) {
+			return false;
 		}
 	}
 
