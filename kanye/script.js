@@ -5,11 +5,13 @@ function updateWindow() {
 }
 
 $(document).ready(function() {
-	$(".song").each(function(i) {
-		var $song = $(this);
-		setTimeout(function() {
-			$song.animate({ marginLeft: "4%", marginRight: "4%", opacity: "1" });
-		}, 160 * i);
+	$(window).load(function() {
+		$(".song").each(function(i) {
+			var $song = $(this);
+			setTimeout(function() {
+				$song.animate({ marginLeft: "4%", marginRight: "4%", opacity: "1" });
+			}, 160 * i);
+		});
 	});
 
 	$(window).resize(updateWindow());
