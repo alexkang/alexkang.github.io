@@ -48,7 +48,7 @@ h3 {
 	position: absolute;
 	top: 12%;
 	width: 100%;
-	margin-bottom: 16px;
+	padding-bottom: 16px;
 	z-index: 1;
 }
 
@@ -66,6 +66,5 @@ h3 {
 
 .footer {
 	margin-top: 72px;
-	margin-bottom: 16px;
 	text-align: center;
 }
