@@ -1,0 +1,65 @@
+body {
+	font-family: Helvetica, Arial;
+	margin: 0;
+	padding: 0;
+	background-color: #EDEDED;
+}
+
+h1 {
+	margin-top: 0;
+	padding-left: 3%;
+	color: white;
+	font-size: 48pt;
+	z-index: 1;
+}
+
+h2 {
+	font-weight: normal;
+}
+
+h3 {
+	font-weight: lighter;
+}
+
+.banner_holder {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 33%;
+	width: 100%;
+}
+
+.banner_overlay {
+	height: 100%;
+	width: 100%;
+	background:linear-gradient(to top, rgba(24, 24, 24, 1),  rgba(0, 0, 0, 0));
+	box-shadow: 0px 3px 5px #aaa;
+}
+
+.banner {
+	height: 100%;
+	width: 100%;
+	background-image: url("images/banner.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center 62%;
+}
+
+.page {
+	position: absolute;
+	top: 12%;
+	width: 100%;
+	margin-bottom: 2%;
+	z-index: 1;
+}
+
+.song {
+	padding:1.5rem;
+	padding-top: 1.0rem;
+  	box-shadow:0 1px 2px #aaa;
+  	background:white;
+	margin:0 1rem 1rem;
+	margin-left: 4%;
+	margin-right: 4%;
+	border-radius:3px;
+}
