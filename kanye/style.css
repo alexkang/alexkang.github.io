@@ -58,8 +58,9 @@ h3 {
   	box-shadow:0 1px 2px #aaa;
   	background:white;
 	margin:0 1rem 1rem;
-	margin-left: 4%;
-	margin-right: 4%;
+	margin-left: -96%;
+	margin-right: 104%;
+	opacity: 0;
 	border-radius:3px;
 }
 
