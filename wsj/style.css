@@ -1,0 +1,19 @@
+body {
+	margin: 0;
+}
+
+#the_truth {
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	text-align: center;
+	padding-top: 20%;
+	background-color: black;
+	color: white;
+	font-family: Helvetica;
+	font-size: 72px;
+	font-weight: bolder;
+	opacity: 0;
+	z-index: 9999;
+}
