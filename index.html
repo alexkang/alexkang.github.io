@@ -17,16 +17,22 @@
       }
     </style>
     <script type="text/javascript">
+      function resetTimer(timer) {
+        if (timer != null) {
+          clearTimeout(timer);
+        }
+        return setTimeout(function() {
+          bgMusic.pause();
+        }, 200);
+      }
+      var timer;
       var bgMusic = new Audio("015_Siiiiiiiiilver Surffffeeeeer Intermission.mp3");
       document.onmousemove = function() {
-        clearTimeout(timer);
+        resetTimer(timer);
         if (bgMusic.paused) {
           bgMusic.play()
         }
       }
-      timer = setTimeout(function() {
-        bgMusic.pause();
-      }, 200);
     </script>
   </head>
   <body>
