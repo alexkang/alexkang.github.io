@@ -23,12 +23,12 @@
         }
         return setTimeout(function() {
           bgMusic.pause();
-        }, 200);
+        }, 400);
       }
       var timer;
       var bgMusic = new Audio("015_Siiiiiiiiilver Surffffeeeeer Intermission.mp3");
       document.onmousemove = function() {
-        resetTimer(timer);
+        timer = resetTimer(timer);
         if (bgMusic.paused) {
           bgMusic.play()
         }
