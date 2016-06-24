@@ -4,8 +4,4 @@
 		$("#the_truth").fadeTo(40000, 100, function(){});
 	});
 
-	$("#the_truth").click(function() {
-		$(this).css("opacity", 100);
-	});
-
 })();
