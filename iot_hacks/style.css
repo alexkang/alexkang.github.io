@@ -1,0 +1,118 @@
+body {
+	margin: 0;
+	font-family: Catamaran, Helvetica, Arial, sans-serif;
+	font-size: 24px;
+}
+
+h1 {
+	margin-top: 0;
+}
+
+.header {
+	background: url("background.jpg");
+	background-position: 0 36%;
+	background-size: 100%;
+	color: #FFFFFF;
+	height: 200px;
+	padding-top: 72px;
+	padding-bottom: 72px;
+	box-shadow: 0px 2px 8px #263238;
+	font-family: "Share Tech Mono", monospace;
+}
+
+.header-title {
+	margin: 44px;
+}
+
+.header-subtitle {
+	clear: both;
+	margin-left: 120px;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.header-text {
+	float:left;
+	font-size: 72px;
+	font-weight: bold;
+	white-space: pre;
+}
+
+.blinking-cursor {
+  	float:left;
+  	font-weight: 100;
+	font-size: 80px;
+	-webkit-animation: 1s blink step-end infinite;
+	-moz-animation: 1s blink step-end infinite;
+	-ms-animation: 1s blink step-end infinite;
+	-o-animation: 1s blink step-end infinite;
+	animation: 1s blink step-end infinite;
+}
+
+@keyframes "blink" {
+	from, to {
+	color: transparent;
+	}
+	50% {
+	color: #FFFFFF;
+	}
+}
+
+@-moz-keyframes blink {
+	from, to {
+	color: transparent;
+	}
+	50% {
+	color: #FFFFFF;
+	}
+}
+
+@-webkit-keyframes "blink" {
+	from, to {
+	color: transparent;
+	}
+	50% {
+	color: #FFFFFF;
+	}
+}
+
+@-ms-keyframes "blink" {
+	from, to {
+	color: transparent;
+	}
+	50% {
+	color: #FFFFFF;
+	}
+}
+
+@-o-keyframes "blink" {
+	from, to {
+	color: transparent;
+	}
+	50% {
+	color: #FFFFFF;
+	}
+}
+
+.info {
+	padding-left: 160px;
+	padding-right: 160px;
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+.button {
+
+}
+
+.footer {
+	background-image: url("background.jpg");
+	background-position: 0 60%;
+	background-size: 100%;
+	color: #FFFFFF;
+	height: 120px;
+	padding: 20px;
+	box-shadow: 0px -2px 8px #263238;
+	font-family: "Share Tech Mono", monospace;
+	font-size: 28px;
+}
