@@ -23,7 +23,8 @@ h1 {
 }
 
 .header-title {
-	margin: 44px;
+	margin-top: 40px;
+	margin-left: 5%;
 }
 
 .header-subtitle {
@@ -37,13 +38,16 @@ h1 {
 	float:left;
 	font-size: 72px;
 	font-weight: bold;
-	white-space: pre;
+	max-width: 90%;
+	text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: pre;
 }
 
 .blinking-cursor {
   	float:left;
   	font-weight: 100;
-	font-size: 80px;
+	font-size: 72px;
 	-webkit-animation: 1s blink step-end infinite;
 	-moz-animation: 1s blink step-end infinite;
 	-ms-animation: 1s blink step-end infinite;
