@@ -1,7 +1,7 @@
 (function() {
 	var WRITE_DELAY = 250;
 	var DELETE_DELAY = 100;
-	var THING_DURATION = 1000;
+	var THING_DURATION = 1500;
 	var BLANK_DURATION = 500;
 	var PREFIX = "internet of ";
 	var THINGS = ["things", "toasters", "light bulbs", "rice cookers", "coffee makers", "toilets",
