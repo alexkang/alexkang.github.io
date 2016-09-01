@@ -123,6 +123,7 @@ img {
 .button {
 	font-family: "Share Tech Mono", monospace;
 	font-size: 28px;
+	font-weight: bold;
 	text-decoration: none;
 	border-style: solid;
 	border-width: 2px;
