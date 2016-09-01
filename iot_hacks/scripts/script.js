@@ -4,7 +4,7 @@
 	var THING_DURATION = 1500;
 	var BLANK_DURATION = 500;
 	var PREFIX = "internet of ";
-	var THINGS = ["Apollo", "things", "toasters", "light bulbs", "rice cookers", "coffee makers", "toilets",
+	var THINGS = ["things", "toasters", "light bulbs", "rice cookers", "coffee makers", "toilets",
 				  "toothbrushes", "printers", "vacuum cleaners", "speakers", "cameras", "doors",
 				  "pencils", "couches"];
 
