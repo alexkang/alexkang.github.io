@@ -9,9 +9,14 @@ h1 {
 	margin-top: 0;
 }
 
+img {
+	height: 100px;
+	margin: 28px;
+}
+
 .header {
 	position: relative;
-	background: url("background.png");
+	background: url("images/background.png");
 	background-position: 0 42%;
 	background-size: 100%;
 	color: #000000;
@@ -107,6 +112,10 @@ h1 {
 	padding-bottom: 40px;
 }
 
+.image-row {
+	display: inline-block;
+}
+
 .button {
 	font-family: "Share Tech Mono", monospace;
 	font-size: 28px;
@@ -117,7 +126,7 @@ h1 {
 }
 
 .footer {
-	background-image: url("background.png");
+	background-image: url("images/background.png");
 	background-position: 0 69%;
 	background-size: 100%;
 	color: #000000;
