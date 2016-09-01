@@ -1,3 +1,5 @@
+/* Native HTML elements */
+
 body {
 	margin: 0;
 	font-family: Catamaran, Helvetica, Arial, sans-serif;
@@ -17,6 +19,8 @@ img {
 	height: 100px;
 	margin: 28px;
 }
+
+/* Header */
 
 .header {
 	position: relative;
@@ -110,11 +114,20 @@ img {
 	}
 }
 
+/* Body */
+
 .info {
 	padding-left: 160px;
 	padding-right: 160px;
 	padding-top: 40px;
 	padding-bottom: 40px;
+}
+
+.time-cell {
+	color: #4CAF50;
+	font-weight: bold;
+	text-align: right;
+	padding-right: 44px;
 }
 
 .image-row {
