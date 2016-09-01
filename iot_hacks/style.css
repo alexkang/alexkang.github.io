@@ -10,7 +10,7 @@ h1 {
 }
 
 a {
-	color: #00BFA5;
+	color: #4CAF50;
 }
 
 img {
@@ -21,17 +21,18 @@ img {
 .header {
 	position: relative;
 	background: url("images/background.png");
-	background-position: 0 42%;
+	background-position: 0 16%;
 	background-size: 100%;
 	color: #000000;
 	height: 200px;
 	padding-top: 72px;
 	padding-bottom: 72px;
-	box-shadow: 0px 2px 8px #263238;
+	box-shadow: 0px 2px 8px #9E9E9E;
 	font-family: "Share Tech Mono", monospace;
 }
 
 .header-title {
+	color: #4CAF50;
 	margin-top: 40px;
 	margin-left: 5%;
 }
@@ -69,7 +70,7 @@ img {
 	color: transparent;
 	}
 	50% {
-	color: #000000;
+	color: #4CAF50;
 	}
 }
 
@@ -78,7 +79,7 @@ img {
 	color: transparent;
 	}
 	50% {
-	color: #000000;
+	color: #4CAF50;
 	}
 }
 
@@ -87,7 +88,7 @@ img {
 	color: transparent;
 	}
 	50% {
-	color: #000000;
+	color: #4CAF50;
 	}
 }
 
@@ -96,7 +97,7 @@ img {
 	color: transparent;
 	}
 	50% {
-	color: #000000;
+	color: #4CAF50;
 	}
 }
 
@@ -105,7 +106,7 @@ img {
 	color: transparent;
 	}
 	50% {
-	color: #000000;
+	color: #4CAF50;
 	}
 }
 
@@ -139,5 +140,5 @@ img {
 	padding: 24px;
 	font-family: "Share Tech Mono", monospace;
 	font-size: 28px;
-	box-shadow: 0px -2px 8px #263238;
+	box-shadow: 0px -2px 8px #9E9E9E;
 }
