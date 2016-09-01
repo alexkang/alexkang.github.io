@@ -5,7 +5,8 @@
 	var BLANK_DURATION = 500;
 	var PREFIX = "internet of ";
 	var THINGS = ["things", "toasters", "light bulbs", "rice cookers", "coffee makers", "toilets",
-				  "toothbrushes", "printers", "vacuum cleaners", "speakers", "cameras", "doors"];
+				  "toothbrushes", "printers", "vacuum cleaners", "speakers", "cameras", "doors",
+				  "pencils", "couches"];
 
 	function writeThing(thing, currIndex, onCompletion) {
 		if (currIndex > thing.length) {
