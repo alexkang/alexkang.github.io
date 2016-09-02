@@ -19,6 +19,8 @@ li {
 
 a {
 	color: #4CAF50;
+	cursor: pointer;
+	text-decoration: underline;
 }
 
 img {

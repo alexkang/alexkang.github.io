@@ -45,6 +45,13 @@
 	}
 
 	$(document).ready(function() {
+		$("#elevator").click(function() {
+			var elevator = new Elevator({
+    			mainAudio: "audio/elevator.mp3",
+    			endAudio: "audio/ding.mp3"
+  			});
+  			elevator.elevate();
+		});
 		writeThing(THINGS[0], 0, onThingCompleted(0));
 	});
 })();
