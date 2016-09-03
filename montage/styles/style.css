@@ -160,4 +160,5 @@ h1 {
 	bottom: 3%;
 	left: 0;
 	right: 0;
+	z-index: 4;
 }
