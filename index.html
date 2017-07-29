@@ -60,14 +60,17 @@
         }
         return setTimeout(function() {
           bgMusic.pause();
-        }, 200);
+        }, 500);
       }
-      var timer;
-      var bgMusic = new Audio("015_Siiiiiiiiilver Surffffeeeeer Intermission.mp3");
-      document.onmousemove = function() {
-        timer = resetTimer(timer);
-        if (bgMusic.paused) {
-          bgMusic.play()
+      
+      if (!/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+        var timer;
+        var bgMusic = new Audio("015_Siiiiiiiiilver Surffffeeeeer Intermission.mp3");
+        document.onmousemove = function() {
+          timer = resetTimer(timer);
+          if (bgMusic.paused) {
+            bgMusic.play()
+          }
         }
       }
     </script>
@@ -100,9 +103,9 @@
     </ul>
     Actual job experience:
     <ul>
-      <li>Tag (social media app): Worked on various camera and UI features on Android.</li>
-      <li>Ericsson: Worked on proximity via Bluetooth for the MediaRoom platform (Set-Top box software) on both iOS and Android. Also worked on voice commands.</li>
-      <li>Google: Working on the Nearby team for iOS and Android.</li>
+      <li>Google (2016 - present): Working on the Nearby team for iOS and Android.</li>
+      <li>Ericsson (2015): Worked on proximity via Bluetooth for the MediaRoom platform (Set-Top box software) on both iOS and Android. Also worked on voice commands.</li>
+      <li>Tag (2014): Social media app startup. Worked on various camera and UI features on Android.</li>
     </ul>
     
     <!-- Contact Links -->
