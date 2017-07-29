@@ -54,24 +54,29 @@
     
     <!-- Annoying Auto-Playing Music -->
     <script type="text/javascript">
-      function resetTimer(timer) {
+      var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+      var bgMusic = new Audio("015_Siiiiiiiiilver Surffffeeeeer Intermission.mp3");
+      var timer;
+      
+      function resetTimer() {
         if (timer != null) {
           clearTimeout(timer);
         }
-        return setTimeout(function() {
+        timer = setTimeout(function() {
           bgMusic.pause();
-        }, 1000);
+        }, 300);
       }
       
-      if (!/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-        var timer;
-        var bgMusic = new Audio("015_Siiiiiiiiilver Surffffeeeeer Intermission.mp3");
-        document.onmousemove = function() {
-          timer = resetTimer(timer);
-          if (bgMusic.paused) {
-            bgMusic.play()
-          }
+      function resumeMusic() {
+        resetTimer();
+        if (bgMusic.paused) {
+          bgMusic.play()
         }
+      }
+      
+      if (!isMobile) {
+        document.onmousemove = resumeMusic;
+        document.onscroll = resumeMusic;
       }
     </script>
   </head>
