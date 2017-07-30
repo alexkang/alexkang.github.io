@@ -34,10 +34,6 @@
       body, html {
         font-family: "Comic Sans MS", "Indie Flower", Helvetica, sans-serif;
         cursor: url("images/cursor.gif"), auto;
-        max-width: 488px;
-        padding-left: 2px;
-        padding-right: 2px;
-        padding-bottom: 4px;
         overflow-x: hidden;
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
@@ -48,6 +44,10 @@
       }
       h2 {
         font-size: 20px;
+      }
+      .content {
+		max-width: 469px;
+		margin: auto;
       }
       .disclaimer {
         font-size: 8px;
@@ -91,10 +91,11 @@
     </script>
   </head>
   <body>
+  <div class="content">
     <!-- Title Section -->
     <h1>Popeye's #6 Combo, Spicy</h1>
     <h2>with Cajun Fries and an Orange Fanta</h2>
-    <img src="images/profile_pic.gif" style="width:100%;" />
+    <img src="images/profile_pic.gif" style="width:100%; max-width:400px" />
     <h4>Thanks <a href="http://angelabalberto.tumblr.com">Angela</a> for the illustrations <3</h4>
     <h3>formerly known as Alex Kang</h3>
     
@@ -154,5 +155,6 @@
     <!-- Other Annoying Things -->
     <div class="disclaimer">fuck bootstrap</div>
     <div class="stuck_pixel"></div>
+  </div>
   </body>
 </html>
