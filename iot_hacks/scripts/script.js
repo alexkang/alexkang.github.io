@@ -48,7 +48,8 @@
 		$("#elevator").click(function() {
 			var elevator = new Elevator({
     			mainAudio: "audio/elevator.mp3",
-    			endAudio: "audio/ding.mp3"
+    			endAudio: "audio/ding.mp3",
+    			duration: 5000
   			});
   			elevator.elevate();
 		});

@@ -21,26 +21,26 @@
     <meta name="msapplication-TileImage" content="images/ms-icon-144x144.png">
     
     <!-- Other Stuff -->
-    <link href="https://fonts.googleapis.com/css?family=Gochi+Hand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
     <meta name="theme-color" content="#64FFDA">
     
     <!-- Styling -->
     <style>
-      body, html {
-        font-family: "Comic Sans MS", "Gochi Hand", Helvetica, sans-serif;
-        cursor: url("images/cursor.gif"), auto;
-        width: 666px;
-      }
       a {
         cursor: url("images/cursor.gif"), auto;
       }
+      body, html {
+        font-family: "Comic Sans MS", "Indie Flower", Helvetica, sans-serif;
+        cursor: url("images/cursor.gif"), auto;
+        width: 420px;
+        padding-left: 8px;
+        padding-bottom: 4px;
+      }
       h1 {
         font-size: 32px;
-        font-weight: bold;
       }
       h2 {
         font-size: 20px;
-        font-weight: bold;
       }
       .disclaimer {
         font-size: 8px;
@@ -61,7 +61,7 @@
       var bgMusic = new Audio("015_Siiiiiiiiilver Surffffeeeeer Intermission.mp3");
       var timer;
       
-      function resetTimer() {
+      function resetMusicTimeout() {
         if (timer != null) {
           clearTimeout(timer);
         }
@@ -71,7 +71,7 @@
       }
       
       function resumeMusic() {
-        resetTimer();
+        resetMusicTimeout();
         if (bgMusic.paused) {
           bgMusic.play()
         }
@@ -86,24 +86,25 @@
   <body>
     <!-- Title Section -->
     <h1>Popeye's #6 Combo, Spicy</h1>
-    <h2>Cajun Fries on the side with an Orange Fanta</h2>
+    <h2>with Cajun Fries and an Orange Fanta</h2>
     <img src="images/profile_pic.gif" style="width:320px;" />
-    <h5>Thanks to <a href="http://angelabalberto.tumblr.com">Angela</a> for the illustrations <3</h5>
-    <h4>formerly known as Alex Kang</h4>
+    <h4>Thanks to <a href="http://angelabalberto.tumblr.com">Angela</a> for the illustrations <3</h4>
+    <h3>formerly known as Alex Kang</h3>
     
     <!-- About Section -->
     I'm into:
     <ul>
       <li>Mobile development</li>
       <li>~*~* Material Design *~*~</li>
-      <li>Following the lives of Kanye West and Kim Kardashian</li>
-      <li>making a e s t h e t i c beats</li>
       <li>riding fixed-gear bicycles</li>
+      <li>making a e s t h e t i c beats</li>
+      <li>Carly Rae Jepsen</li>
+      <li>Stalking Kanye West and Kim Kardashian</li>
       <li>(not) watching hentai</li>
     </ul>
     When I'm not watching hentai, I've worked on:
     <ul>
-      <li>Berkeley Mobile (<a target="_blank" href="https://itunes.apple.com/us/app/asuc-mobile/id912243518?mt=8">iOS</a>/<a href="https://play.google.com/store/apps/details?id=com.asuc.asucmobile">Android</a>)</li>
+      <li>Berkeley Mobile (<a target="_blank" href="https://itunes.apple.com/us/app/asuc-mobile/id912243518">iOS</a>/<a href="https://play.google.com/store/apps/details?id=com.asuc.asucmobile">Android</a>)</li>
       <li><a target="_blank" href="https://play.google.com/store/apps/details?id=com.alexkang.loopboard">LoopBoard</a></li>
       <li><a target="_blank" href="montage">MontageBoard</a></li>
       <li><a target="_blank" href="http://alex.supply/iot_hacks">IoT Hacks</a></li>
@@ -113,12 +114,12 @@
     <ul>
       <li>Google (2016 - present):
         <ul>
-          <li>Working on the Nearby team for iOS and Android.</li>
+          <li>Working with iOS and Android on the Nearby team.</li>
         </ul>
       </li>
       <li>Ericsson (2015):
         <ul>
-          <li>Worked on proximity via Bluetooth for the MediaRoom platform (set-top box software) on iOS and Android. Also worked on voice commands.</li>
+          <li>Worked on user proximity via Bluetooth for the MediaRoom platform on iOS and Android. Also worked on voice commands.</li>
         </ul>
       </li>
       <li>Tag (2014):
@@ -141,7 +142,7 @@
       <li><a href="mailto:akang@berkeley.edu">akang@berkeley.edu</a></li>
       <li><a href="mailto:xx_dark_dragon_knight_xx@berkeley.edu">xx_dark_dragon_knight_xx@berkeley.edu</a></li>
     </ul>
-    <a target="_blank" href="Alexander Kang - Resume.pdf">Ŕéśúḿé</a><p>
+    <a target="_blank" href="Alexander Kang - Resume.pdf">View my résúmé</a><p>
     
     <!-- Other Annoying Things -->
     <div class="disclaimer">fuck bootstrap</div>
