@@ -53,34 +53,6 @@
         top: 30%;
       }
     </style>
-    
-    <!-- Annoying Auto-Playing Music -->
-    <script type="text/javascript">
-      var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-      var bgMusic = new Audio("015_Siiiiiiiiilver Surffffeeeeer Intermission.mp3");
-      var timer;
-      
-      function resetMusicTimeout() {
-        if (timer != null) {
-          clearTimeout(timer);
-        }
-        timer = setTimeout(function() {
-          bgMusic.pause();
-        }, 500);
-      }
-      
-      function resumeMusic() {
-        resetMusicTimeout();
-        if (bgMusic.paused) {
-          bgMusic.play()
-        }
-      }
-      
-      if (!isMobile) {
-        document.onmousemove = resumeMusic;
-        document.onscroll = resumeMusic;
-      }
-    </script>
   </head>
   <body>
   <div class="content">
