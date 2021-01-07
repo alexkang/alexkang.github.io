@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/asapketchup
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://alex.supply
+  * I am asapketchup (https://keybase.io/asapketchup) on keybase.
+  * I have a public key ASBrYiLIcCV6K17fip1eMbIfnjDGM5Z9hSDMTrjK3Ql0pgo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120f8649b9963e55da9ff63cb260f9488a5b2e2a374e8c72bfa69fb7c15c16e3eb80a",
+      "host": "keybase.io",
+      "kid": "01206b6222c870257a2b5edf8a9d5e31b21f9e30c633967d8520cc4eb8cadd0974a60a",
+      "uid": "fd181329889a7436f65d7cdcb5605019",
+      "username": "asapketchup"
+    },
+    "merkle_root": {
+      "ctime": 1609981870,
+      "hash": "85c14fe46a7b70a375b0dfe86dc65fe3f806412c55b669e213a1dbe9c250b80256a030608faf463ecf4cad04fc67dbdfda174f54a7de9693d664f969f5b411aa",
+      "hash_meta": "9e1012dd30bd0ab7246d17517915cb9d451444cbc5523b6d2298fd59fa56191a",
+      "seqno": 18620115
+    },
+    "service": {
+      "entropy": "Wi7B84WVwKegj8ZydZapjBts",
+      "hostname": "alex.supply",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.5.0"
+  },
+  "ctime": 1609981899,
+  "expire_in": 504576000,
+  "prev": "5121d778f9c76a8dac9595f1ea435cc09f4f44017a906cd007cc52639dce42c3",
+  "seqno": 15,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEga2IiyHAleite34qdXjGyH54wxjOWfYUgzE64yt0JdKYKp3BheWxvYWTESpcCD8QgUSHXePnHao2slZXx6kNcwJ9PRAF6kGzQB8xSY53OQsPEIC32i4AciOT04vBzCmGxCxfjZcOuEKOhoQQJnT6Q+mLfAgHCo3NpZ8RAAuOUMGcWlXLdZgu0cp4GX5Bg6g5IODKNbt/+J0XZ+FmG5G24oLmQMekqEoDc+gOTmS51nrhsVbiL38xjKQ/RC6hzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIAEccnMDKEN4bl+2UQrgwlOATVyThYX+PxcSKLlC/yuOo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/asapketchup
+
+==================================================================
